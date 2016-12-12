@@ -1,5 +1,6 @@
 const electron = require('electron');
-const {app, BrowserWindow} = electron;
+const contextMenu = require('./electron/context-menu');
+const {app, BrowserWindow, Menu} = electron;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -16,6 +17,8 @@ let createWindow = () => {
   win.on('closed', () => {
     win = null;
   });
+
+  Menu.setApplicationMenu(Menu.buildFromTemplate(contextMenu(app, 'develop-full')))
 }
 
 // Basic events handling
