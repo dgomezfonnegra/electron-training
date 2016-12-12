@@ -1,0 +1,19 @@
+{
+  "name": "electron-training",
+  "version": "0.0.1",
+  "description": "Code examples to ilustrate electron projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron .",
+    "build": "./node_modules/.bin/electron-packager ./ electron-training --platform=darwin --arch=x64  --overwrite"
+  },
+  "author": "@dgomezfonnegra",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.4.12"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.4.0",
+    "eslint": "^3.12.0"
+  }
+}
