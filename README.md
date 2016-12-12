@@ -6,6 +6,10 @@ This repo exists to use some examples on the talk **Desktop apps with JS & Elect
 
 To use this repo with some cool examples you can jump into the following branches to see more examples of things you may need. Please note that on each branch you'll have a fully functional electron project, so perhaps you'll find things duplicated between branches.
 
+```
+keyboard-shortcuts
+```
+
 ## Installation
 
 Just clone the repo :)...
