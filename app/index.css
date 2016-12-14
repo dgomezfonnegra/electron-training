@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.display-text {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  display: block;
+  float: left;
+}
+.button {
+  width: 50vw;
+  height: 50px;
+  display: block;
+  float: left;
+}

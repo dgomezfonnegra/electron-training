@@ -1,7 +1,8 @@
 const electron = require('electron')
 const contextMenu = require('./electron/context-menu')
 const createTray = require('./electron/tray-icon')
-const {app, BrowserWindow, Menu} = electron
+const messaging = require('./electron/messaging-example')
+const {app, BrowserWindow, Menu, ipcMain, dialog} = electron
 const context = {
   win: null,
   tray: null
@@ -26,6 +27,7 @@ let createWindow = () => {
 // Basic events handling
 app.on('ready', () => {
   createTray(app, context, createWindow)()
+  messaging(app, ipcMain, dialog, context)
 })
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
