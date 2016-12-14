@@ -8,6 +8,13 @@ To use this repo with some cool examples you can jump into the following branche
 
 ```
 keyboard-shortcuts
+tray-icon
+```
+
+All examples can be found at
+
+```
+develop
 ```
 
 ## Installation
