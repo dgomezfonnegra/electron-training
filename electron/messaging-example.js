@@ -9,13 +9,13 @@
  */
 module.exports = (app, ipcMain, dialog, context) => {
   const fs = require('fs')
-  let messages = (message, filePath, id) => context.win.webContents.send(message, filePath, id)
+  let messages = (message, text) => context.win.webContents.send(message, text)
 
   ipcMain.on('file-request', (event, type) => dialog.showOpenDialog(
     context.win,
     {properties: [type]},
     (filePath) => {
-      if (filePath.length) {
+      if (filePath && filePath.length) {
         messages('file-back', fs.readFileSync(filePath[0], 'utf8'))
       }
     })
