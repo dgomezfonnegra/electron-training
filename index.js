@@ -22,13 +22,12 @@ let createWindow = () => {
   Menu.setApplicationMenu(Menu.buildFromTemplate(contextMenu(app, 'develop-full')))
 }
 
-
-
 // Basic events handling
 app.on('ready', () => {
   createTray(app, context, createWindow)()
   messaging(app, ipcMain, dialog, context)
 })
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
